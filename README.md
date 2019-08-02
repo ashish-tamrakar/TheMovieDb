@@ -19,7 +19,6 @@ Android Studio 3.2 or higher
 ## Screenshots of app -
 
 ![screenshot1_scaled](https://user-images.githubusercontent.com/6271062/62344305-1601df80-b50b-11e9-8fe5-f20f5b7a50a1.png)
-
 ![screenshot2_scaled](https://user-images.githubusercontent.com/6271062/62344304-1601df80-b50b-11e9-8f9e-80c8a9a102cb.png)
 
 
