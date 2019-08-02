@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="list_poster_height">250dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp14">14dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+</resources>

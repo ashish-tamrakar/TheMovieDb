@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">The Movie DB</string>
+
+    <string name="movie_poster">Movie Poster</string>
+    <string name="movie_backdrop">Movie Backdrop</string>
+
+    <string name="error_no_data">No data returned from server. Please try again</string>
+    <string name="error_network">Error fetching data. %1$s</string>
+    <string name="error_unknown">Unknown error. %1$s</string>
+    <string name="sample_date">8 Nov 18</string>
+    <string name="sample_title">Back to the fatherland</string>
+</resources>
