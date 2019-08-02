@@ -17,7 +17,6 @@ import com.themoviedb.neugelb.ui.MainActivity
 import kotlinx.android.synthetic.main.fragment_movie_list.*
 import javax.inject.Inject
 
-
 class MovieListFragment : androidx.fragment.app.Fragment() {
     private lateinit var movieListAdapter: MovieListAdapter
     @Inject
@@ -32,21 +31,20 @@ class MovieListFragment : androidx.fragment.app.Fragment() {
         super.onAttach(context)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movie_list, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.title = getString(R.string.app_name)
+        return inflater.inflate(R.layout.fragment_movie_list, container, false)
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val movieListViewModel = ViewModelProviders.of(
-            this, movieListViewModelFactory)
-            .get(MovieListViewModel::class.java)
-
+                this, movieListViewModelFactory)
+                .get(MovieListViewModel::class.java)
 
         movieListAdapter = MovieListAdapter {
             NavHostFragment.findNavController(this)
-                .navigate(MovieListFragmentDirections.actionNext(it.toString()))
+                    .navigate(MovieListFragmentDirections.actionNext(it.toString()))
         }
 
         movieList.apply {
@@ -101,3 +99,4 @@ class MovieListFragment : androidx.fragment.app.Fragment() {
         }
     }
 }
+

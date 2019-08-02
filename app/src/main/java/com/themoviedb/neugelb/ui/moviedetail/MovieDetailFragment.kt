@@ -27,29 +27,26 @@ class MovieDetailFragment : androidx.fragment.app.Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
-    return inflater.inflate(com.themoviedb.neugelb.R.layout.fragment_movie_detail, container, false)
+        return inflater.inflate(com.themoviedb.neugelb.R.layout.fragment_movie_detail, container, false)
 
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.itemId == android.R.id.home){
+        if (item?.itemId == android.R.id.home) {
             activity?.onBackPressed()
         }
         return super.onOptionsItemSelected(item)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-
-
         super.onActivityCreated(savedInstanceState)
         val movieDetailViewModel = ViewModelProviders.of(
-            this,movieDetailViewModelFactory)
-            .get(MovieDetailViewModel::class.java)
+                this, movieDetailViewModelFactory)
+                .get(MovieDetailViewModel::class.java)
 
         showBackButton()
 
@@ -61,7 +58,7 @@ class MovieDetailFragment : androidx.fragment.app.Fragment() {
         movieDetailViewModel.setMovieId(params.movieId.toLong())
     }
 
-    fun showBackButton() {
+    private fun showBackButton() {
         if (activity is MainActivity) {
             (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }

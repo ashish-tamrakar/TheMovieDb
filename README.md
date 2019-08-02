@@ -16,5 +16,7 @@ Here I have used Clean Architecture patten written in Kotlin. It uses [Jetpack's
 ## Pre-requisites
 Android Studio 3.2 or higher
 
+## Screenshots of app -
+
 
 

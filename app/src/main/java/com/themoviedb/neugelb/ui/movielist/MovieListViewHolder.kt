@@ -21,9 +21,6 @@ class MovieListViewHolder(override val containerView: View) :
                 moviePoster.contentDescription = title
                 Picasso.get().load(ResourceUrl.getPosterUrl(posterPath)).resize(200, 250)
                     .placeholder(R.drawable.poster_placeholder).into(moviePoster)
-                val rating = voteAverage / 10 * 5
-                ratingBar.rating = rating
-                movieReleaseDate.text = releaseDate.getReadable()
                 itemView.setOnClickListener { listener.invoke(this.id) }
             }
         }
